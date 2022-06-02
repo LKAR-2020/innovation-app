@@ -1,0 +1,26 @@
+.owl-nav {
+    position: absolute;
+    top: -5rem;
+    right: 1%;
+}
+
+.fixe {
+   position: fixed;
+   top: 0;
+   z-index: 50;
+}
+.slow{
+    /* position: absolute; */
+
+
+    background-image: url(photobackground1.png);
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-size: cover;
+    animation: fall 7s linear infinite ;
+}
+@keyframes fall {
+    0%{
+        transform: translateY(-88px);
+    }
+}

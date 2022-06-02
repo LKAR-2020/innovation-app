@@ -1,0 +1,1 @@
+<img {{ $attributes->merge(['class' => '']) }} src="{{asset('logo/logo_cat_pub.png')}}" alt="" srcset="">

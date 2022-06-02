@@ -43,48 +43,6 @@ return [
     ],
 
     /*
-    |--------------------------------------------------------------------------
-    | Editor
-    |--------------------------------------------------------------------------
-    |
-    | Choose your preferred editor to use when clicking file name.
-    |
-    | Supported: "phpstorm", "vscode", "vscode-insiders", "vscode-remote",
-    |            "vscode-insiders-remote", "vscodium", "textmate", "emacs",
-    |            "sublime", "atom", "nova", "macvim", "idea", "netbeans",
-    |            "xdebug", "espresso"
-    |
-    */
-
-    'editor' => env('DEBUGBAR_EDITOR', 'vscode'),
-
-    /*
-    |--------------------------------------------------------------------------
-    | Remote Path Mapping
-    |--------------------------------------------------------------------------
-    |
-    | If you are using a remote dev server, like Laravel Homestead, Docker, or
-    | even a remote VPS, it will be necessary to specify your path mapping.
-    |
-    | Leaving one, or both of these, empty or null will not trigger the remote
-    | URL changes and Debugbar will treat your editor links as local files.
-    |
-    | "remote_sites_path" is an absolute base path for your sites or projects
-    | in Homestead, Vagrant, Docker, or another remote development server.
-    |
-    | Example value: "/home/vagrant/Code"
-    |
-    | "local_sites_path" is an absolute base path for your sites or projects
-    | on your local computer where your IDE or code editor is running on.
-    |
-    | Example values: "/Users/<name>/Code", "C:\Users\<name>\Documents\Code"
-    |
-    */
-
-    'remote_sites_path' => env('DEBUGBAR_REMOTE_SITES_PATH', ''),
-    'local_sites_path' => env('DEBUGBAR_LOCAL_SITES_PATH', ''),
-
-    /*
      |--------------------------------------------------------------------------
      | Vendors
      |--------------------------------------------------------------------------
@@ -158,15 +116,15 @@ return [
         'db'              => true,  // Show database (PDO) queries and bindings
         'views'           => true,  // Views with their data
         'route'           => true,  // Current route information
-        'auth'            => false, // Display Laravel authentication status
+        'auth'            => true, // Display Laravel authentication status
         'gate'            => true,  // Display Laravel Gate checks
         'session'         => true,  // Display session data
         'symfony_request' => true,  // Only one can be enabled..
         'mail'            => true,  // Catch mail messages
         'laravel'         => true, // Laravel version and environment
-        'events'          => false, // All events fired
+        'events'          => true, // All events fired
         'default_request' => false, // Regular or special Symfony request logger
-        'logs'            => true, // Add the latest log messages
+        'logs'            => false, // Add the latest log messages
         'files'           => false, // Show the included files
         'config'          => false, // Display config settings
         'cache'           => false, // Display cache events

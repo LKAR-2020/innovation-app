@@ -15,18 +15,22 @@ class User extends Authenticatable
     /**
      * The attributes that are mass assignable.
      *
-     * @var array<int, string>
+     * @var string[]
      */
     protected $fillable = [
         'name',
         'email',
+        'prenom',
+        'contact',
+        'date',
+        'socialite_id',
         'password',
     ];
 
     /**
      * The attributes that should be hidden for serialization.
      *
-     * @var array<int, string>
+     * @var array
      */
     protected $hidden = [
         'password',
@@ -36,9 +40,22 @@ class User extends Authenticatable
     /**
      * The attributes that should be cast.
      *
-     * @var array<string, string>
+     * @var array
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    // public function topmodel()
+    // {
+    //     // return $this->belongsToMany(Topmodel::class, 'topmodel_user', 'user_id' , 'topmodel_id')->withPivot('active');
+    //     return $this->belongsToMany(Topmodel::class)
+    //     ->as('subscription')
+    //     ->withTimestamps();
+        
+    // }
+    public function Likes()
+    {
+        return $this->hasMany(like::class);
+    }
+    
 }
